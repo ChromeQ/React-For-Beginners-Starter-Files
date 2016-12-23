@@ -9,14 +9,13 @@ class StorePicker extends React.Component {
 	// }
 
 	goToStore(event) {
-		event.preventDefault();
-
 		const storeId = this.storeInput.value;
+
+		event.preventDefault();
 		this.context.router.transitionTo(`/store/${storeId}`);
 	}
 
 	render() {
-		console.log(this);
 		return (
 			<form className="store-selector" onSubmit={(e) => this.goToStore(e)}>
 				<h2>Please enter a store</h2>

@@ -1,26 +1,28 @@
 .order-enter {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  -webkit-transform: translateX(-120%);
-          transform: translateX(-120%);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   max-height: 0;
   padding: 0 !important;
+  -webkit-transform: translateX(-120%);
+          transform: translateX(-120%);
 }
 .order-enter.order-enter-active {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
   max-height: 60px;
   padding: 2rem 0 !important;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 .order-leave {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  max-height: 60px;
+  padding: 2rem 0 !important;
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 .order-leave.order-leave-active {
   max-height: 0;
-  padding: 0;
+  padding: 0 !important;
   -webkit-transform: translateX(120%);
           transform: translateX(120%);
 }
@@ -31,17 +33,17 @@
           transform: translateY(100%);
 }
 .count-enter.count-enter-active {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
 }
 .count-leave {
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
   position: absolute;
   left: 0;
   bottom: 0;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
 }
 .count-leave.count-leave-active {
   -webkit-transform: translateY(-100%);
@@ -596,7 +598,9 @@ input[type=submit].github,
 button.facebook,
 input[type=submit].facebook,
 button.twitter,
-input[type=submit].twitter {
+input[type=submit].twitter,
+button.google,
+input[type=submit].google {
   border: 0;
   display: block;
   margin-bottom: 2rem;
@@ -627,6 +631,14 @@ input[type=submit].twitter {
 button.twitter:after,
 input[type=submit].twitter:after {
   background: #2c8dd0;
+}
+button.google,
+input[type=submit].google {
+  background: #d34836;
+}
+button.google:after,
+input[type=submit].google:after {
+  background: #ae3626;
 }
 .store-selector {
   background: #fff;
