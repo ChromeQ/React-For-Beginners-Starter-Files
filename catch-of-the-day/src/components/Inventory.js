@@ -45,8 +45,8 @@ class Inventory extends React.Component {
 		base.unauth();
 
 		this.setState({
-			user: null
-		})
+			uid: null
+		});
 	}
 
 	authHandler(err, authData) {
